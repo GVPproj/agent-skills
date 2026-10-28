@@ -8,4 +8,4 @@ Keep the UI simple and refined. Do not add unrequested headers, footers, decorat
 
 Reuse existing component primitives. Create composable primitives when they simplify the implementation or repeated patterns justify them; avoid premature abstraction.
 
-Account for relevant interaction states, including loading, empty, error, and disabled states. Preserve accessible semantics, keyboard navigation, visible focus, and responsive behavior appropriate to the platform.
+Account for relevant interaction states, including loading, empty, error, and disabled states. Preserve accessible semantics, keyboard navigation, visible focus, and responsive behavior appropriate to the platform.  If conventions in the project exist for these already, follow them.
