@@ -1,6 +1,8 @@
 # Personal agent skills
 
-A small, locally owned Pi skills collection. 
+My trim of https://github.com/mattpocock/skills
+
+These are simplified to my workflow, with some extra rules and edits (attempting) to counteract bad design habits in the models.
 
 ## Use
 
