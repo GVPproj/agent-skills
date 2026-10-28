@@ -1,0 +1,12 @@
+{
+  "name": "personal-agent-skills",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Locally owned Pi skills, adapted from a curated snapshot of mattpocock/skills",
+  "license": "MIT",
+  "keywords": ["pi-package"],
+  "pi": {
+    "skills": ["./skills"],
+    "prompts": ["./prompts/*.md"]
+  }
+}
