@@ -33,7 +33,7 @@ Arguments work normally, for example:
 /handoff continue with the next ticket
 ```
 
-All skills also have native Pi commands, such as `/skill:setup` and `/skill:tdd`. The short commands are thin prompt templates that read the skill files; they do not duplicate the instructions.
+All skills also have native Pi commands, such as `/skill:setup` and `/skill:tdd`. The short commands are thin prompt templates that read the skill files.
 
 ### Supporting skills
 
@@ -43,20 +43,7 @@ These are available to the agent but have no additional short aliases to remembe
 - **domain-modeling**: shared domain language, concrete business scenarios, glossary formats, and selective ADRs.
 - **codebase-design**: deep modules, interfaces, seams, adapters, and testability; used by TDD when the interface needs design work.
 
-They are ordinary editable skills in `skills/`, not hidden framework code. Invoke them explicitly with `/skill:domain-modeling` or `/skill:codebase-design` when useful.
-
-## Edit your collection
-
-Edit `skills/<name>/SKILL.md` and its adjacent reference files. Then `/reload`. For example:
-
-```text
-~/agent-skills/skills/implement/SKILL.md
-~/agent-skills/skills/grilling/SKILL.md
-~/agent-skills/skills/domain-modeling/SKILL.md
-~/agent-skills/skills/codebase-design/SKILL.md
-```
-
-The `prompts/` files only provide short command aliases. They assume this collection lives at `~/agent-skills`; if you move it, update those paths and reinstall the local package. Native `/skill:name` commands use Pi's discovered paths and do not depend on the alias paths.
+They are ordinary editable skills in `skills/`. Invoke them explicitly with `/skill:domain-modeling` or `/skill:codebase-design` when useful.
 
 ## Project configuration
 
