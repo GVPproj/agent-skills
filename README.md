@@ -1,6 +1,6 @@
 # Personal agent skills
 
-A small, locally owned Pi collection copied from [mattpocock/skills](https://github.com/mattpocock/skills), with minimal Pi compatibility changes. These are editable source files, not an upstream-managed installation. See [UPSTREAM.md](UPSTREAM.md) for the exact source revision and changes.
+A small, locally owned Pi skills collection. These are editable source files; adapt them to your workflow.
 
 ## Use
 
@@ -52,25 +52,17 @@ Edit `skills/<name>/SKILL.md` and its adjacent reference files. Then `/reload`. 
 ~/agent-skills/skills/codebase-design/SKILL.md
 ```
 
-No build, dependency install, publishing, or upstream update is needed. The local package loads these files directly. There is no Git remote or automatic upstream synchronization. Git has been initialized; make your own first commit when the baseline looks right:
-
-```sh
-cd ~/agent-skills
-git add .
-git commit -m "Start personal Pi skills collection"
-```
+No build, dependency install, or publishing is needed. The local package loads these files directly.
 
 The `prompts/` files only provide short command aliases. They assume this collection lives at `~/agent-skills`; if you move it, update those paths and reinstall the local package. Native `/skill:name` commands use Pi's discovered paths and do not depend on the alias paths.
 
 ## Project configuration
 
-`/setup` uses Pocock's defaults. It previews changes, asks for confirmation, then records the tracker and domain-document conventions in the project's `docs/agents/` and effective Pi context file. GitHub, GitLab, local Markdown, and a user-described tracker such as Linear are supported. Credentials stay outside these documents.
+`/setup` previews changes, asks for confirmation, then records the tracker and domain-document conventions in the project's `docs/agents/` and effective Pi context file. GitHub, GitLab, local Markdown, and a user-described tracker such as Linear are supported. Credentials stay outside these documents.
 
 By default there is one `GLOSSARY.md` and `docs/adr/`. Glossaries and ADRs are created lazily when there is something worth recording, not scaffolded empty. Multi-context layouts remain available for large projects. `triage` is not included, so its labels are optional and setup skips its label interview.
 
-## Defaults deliberately preserved
-
-This is a curated copy, not a redesign. In particular:
+## Workflow defaults
 
 - **Grilling asks a round of independent questions**, not necessarily one question at a time.
 - **`implement` commits to the current branch** after testing and review. Change its final instruction if you prefer an approval gate or no commits.
@@ -85,7 +77,7 @@ Sub-agent workflows use the sub-agent tools provided by your existing Pi configu
 
 Keep both `domain-modeling` and `codebase-design`: the first clarifies the business model; the second shapes the software implementing it. Neither is a complete DDD methodology.
 
-No additional DDD rules have been inserted into this baseline. If you refine it later, put domain rules in `domain-modeling` (bounded contexts, invariants, ownership, and consistency needs), implementation guidance in `codebase-design`, and checks in `code-review`. Prefer project language and real business constraints over mandating aggregates, repositories, events, or extra layers everywhere.
+Put domain rules in `domain-modeling` (bounded contexts, invariants, ownership, and consistency needs), implementation guidance in `codebase-design`, and checks in `code-review`. Prefer project language and real business constraints over mandating aggregates, repositories, events, or extra layers everywhere.
 
 ## Install elsewhere / remove
 
