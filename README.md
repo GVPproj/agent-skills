@@ -14,6 +14,7 @@ Installed as a local Pi package at `~/agent-skills`. Run `/reload` in an existin
 | `/tdd` | Work test-first at agreed seams |
 | `/to-tickets` | Publish approved vertical-slice tickets to the project's tracker |
 | `/code-review` | Separate standards and specification reviews |
+| `/simplify` | Audit for unnecessary code, comments, prose, and dependencies |
 | `/prototype` | Explore logic/state or alternative UI designs |
 | `/setup` | Configure the current project's tracker and domain documentation |
 | `/diagnosing-bugs` | Diagnose with a tight, reproducible feedback loop |
@@ -26,10 +27,11 @@ Arguments work normally, for example:
 /to-tickets turn the agreed plan into tickets
 /implement .scratch/cancellation/issues/01-cancel-subscription.md
 /code-review work-in-progress since HEAD, against .scratch/cancellation/spec.md
+/simplify src/subscriptions
 /handoff continue with the next ticket
 ```
 
-All 13 skills also have native Pi commands, such as `/skill:setup` and `/skill:tdd`. The short commands are thin prompt templates that read the skill files; they do not duplicate the instructions.
+All 14 skills also have native Pi commands, such as `/skill:setup` and `/skill:tdd`. The short commands are thin prompt templates that read the skill files; they do not duplicate the instructions.
 
 ### Supporting skills
 
