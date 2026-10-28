@@ -17,7 +17,7 @@ If the question is "what should this look like," this is the wrong branch. Use [
 
 ### 1. State the question
 
-Before writing code, write down what state model and what question you're prototyping. One paragraph, at the top of the demo (in a visible intro, not just a comment). A logic prototype that answers the wrong question is pure waste, so make the question explicit so it can be checked later, whether the user is watching now or returning to it AFK.
+Before writing code, record the state model and the question you're prototyping in a top-of-file comment and the handoff, not a visible intro. Make the question explicit so it can be checked later without leaking design rationale or our conversation into the UI.
 
 ### 2. Isolate the logic in a portable module
 
@@ -36,14 +36,14 @@ Pick whichever shape best fits the question being asked, *not* whichever is easi
 
 One file, plain HTML/CSS/JS: no framework, no bundler, no server, everything inline so it opens by double-click and survives being emailed around. Anyone should be able to run it by opening it.
 
-Write it for a non-developer. Every label is in **domain language**, not code: buttons and state read like the business, not the reducer. Explain in plain words what's happening.
+Write it for a non-developer. Every label is in **domain language**, not code: buttons and state read like the business, not the reducer. Let labels, state displays, and controls communicate what's happening; don't add explanatory narration around them.
 
 Lay it out with a clean hierarchy, top to bottom:
 
-1. **Title and one-line explanation** of what this demo lets you explore (the question from step 1).
-2. **Current state**: the full relevant state, rendered as a readable panel (labelled fields, not a raw JSON dump), re-rendered after every click so the change is visible. Where it helps a non-developer follow, call out what just changed.
+1. **Title**: a concise domain label, not an explanation of the prototype or its design question.
+2. **Current state**: the full relevant state, rendered as a readable panel (labelled fields, not a raw JSON dump), re-rendered after every click so the change is visible.
 3. **Free-play buttons**: one button per action, always available, so anyone can poke at the model in any order. Each click dispatches its action and re-renders the state.
-4. **Guided walkthroughs**: a set of **scenarios**, one per tab. Each tab holds a short plain-language description of the scenario (the situation it sets up and what to watch for) and underneath it, the ordered **buttons to press** for that scenario. Each step is a real button: clicking it performs that action and moves to the next step. Starting a walkthrough resets to a known initial state so the scenario runs the same way every time.
+4. **Guided walkthroughs**: a set of **scenarios**, one per tab, with concise domain labels and ordered action buttons, not explanatory paragraphs or "what to watch for" narration. Each step is a real button: clicking it performs that action and moves to the next step. Starting a walkthrough resets to a known initial state so the scenario runs the same way every time.
 
 Choose scenarios that demonstrate the awkward cases, the ones hard to reason about on paper: the happy path, a tricky edge case, an attempt at something that should be illegal.
 

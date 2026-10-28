@@ -8,7 +8,7 @@ Implement the work described by the user in the spec or tickets.
 
 If the user passes a ticket reference, fetch it from the issue tracker and state its title before starting. If the reference is ambiguous, ask.
 
-If the work includes a web UI, read and follow `web-ui.md` (relative to this skill directory).
+If the work includes any UI, read and follow `ui.md` (relative to this skill directory).
 
 Read and follow `../tdd/SKILL.md` (relative to this skill directory) where possible, at pre-agreed seams.
 
