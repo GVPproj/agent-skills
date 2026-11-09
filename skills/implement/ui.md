@@ -2,6 +2,8 @@
 
 Apply this guidance to any user interface, including web, native, mobile, desktop, and terminal UIs. Respect the project's existing conventions, dependencies, and visual language. Prefer the target platform's standards and native primitives.
 
+For browser-based UI work, check whether `agent-browser` is available to the agent as a skill, tool, or CLI. If available, read its usage guidance and use it to inspect the existing UI and verify the implemented changes, including relevant interactions and responsive states. If unavailable or the UI cannot run in a browser, use the project's available UI testing tools instead and report any verification limitations. Do not install `agent-browser` just for this workflow.
+
 Keep the UI simple and refined. Do not add unrequested headers, footers, decorative sections, marketing copy, or commentary about the implementation, request, or conversation. Do not explain the UI to the user inside the UI. Include text only when it helps the user understand or complete a task, such as labels, validation messages, and useful empty states (always keep these succinct).
 
 Reuse existing component primitives if you can finds some. Create composable primitives when they simplify the implementation or repeated patterns justify them; avoid premature abstraction.
