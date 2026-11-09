@@ -15,6 +15,7 @@ Installed as a local Pi package at `~/agent-skills`. Run `/reload` in an existin
 | `/implement` | Implement a spec or tickets with testing and review |
 | `/tdd` | Work test-first at agreed seams |
 | `/to-tickets` | Publish approved vertical-slice tickets to the project's tracker |
+| `/to-pr` | Squash onto a new branch, push, and open a PR that closes its issue |
 | `/code-review` | Separate standards and specification reviews |
 | `/simplify` | Audit for unnecessary code, comments, prose, and dependencies |
 | `/prototype` | Explore logic/state or alternative UI designs |
@@ -28,6 +29,7 @@ Arguments work normally, for example:
 /grill-with-docs redesign our subscription cancellation flow
 /to-tickets turn the agreed plan into tickets
 /implement .scratch/cancellation/issues/01-cancel-subscription.md
+/to-pr #123
 /code-review work-in-progress since HEAD, against .scratch/cancellation/spec.md
 /simplify src/subscriptions
 /handoff continue with the next ticket
