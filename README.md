@@ -13,6 +13,7 @@ Installed as a local Pi package at `~/agent-skills`. Run `/reload` in an existin
 | `/grill-me` | Interview about an idea or decision |
 | `/grill-with-docs` | Interview while sharpening domain language and recording decisions |
 | `/implement` | Implement a spec or tickets with testing and review |
+| `/quickie` | Implement directly without tests, comments, builds, or ceremony |
 | `/tdd` | Work test-first at agreed seams |
 | `/to-tickets` | Publish approved vertical-slice tickets to the project's tracker |
 | `/to-pr` | Squash onto a new branch, push, and open a PR that closes its issue |
